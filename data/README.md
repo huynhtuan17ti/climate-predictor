@@ -34,11 +34,11 @@
 | 32 | WDF5              | Hướng gió cho tốc độ gió giật cao nhất trong 5 giây (tính bằng 360 độ, 360 = north, 180 = south) |
 | 33 | WSF2              | Tốc độ gió nhanh nhất trong 2 phút (tính bằng dặm/giờ) |
 | 34 | WSF5              | Tốc độ gió giật cao nhất trong 5 giây (tính bằng dặm/giờ) |
-| 40 | PSUN              | Monthly Average of the daily percents of possible sunshine |
-| 41 | WDF1              | Wind Direction for Maximum Wind Speed/Fastest 1-Minute (WSF1) |
-| 42 | WDFG              | Wind Direction for Peak Wind Gust Speed (WSFG) |
-| 43 | WDFM              | Wind Direction for Maximum Wind Speed/Fastest Mile (WSFM) |
-| 44 | WSF1              | Maximum Wind Speed/Fastest 1-minute |
-| 45 | WSFG              | Peak Wind Gust Speed. |
-| 46 | WSFM              | Maximum Wind Speed/Fastest Mile. |
-| 35 | **X**_ATTRIBUTES  | Có dạng a,S. Với a là **số ngày bỏ lỡ**, S là nguồn của data |
+| 35 | PSUN              | Trung bình phần trăm thời gian có nắng của các ngày trong tháng. | 
+| 36 | WDF1              | Hướng gió cho tốc độ gió nhanh nhất trong 1 phút | 
+| 37 | WDFG              | Hướng gió cho tốc độ gió giật cao nhất | 
+| 38 | WDFM              | Hướng gió cho tốc độ gió nhanh nhất tính theo 1 dặm đường | 
+| 39 | WSF1              | Tốc độ gió cao nhất trong 1 phút | 
+| 40 | WSFG              | Tốc độ gió giật cao nhất | 
+| 41 | WSFM              | Tốc độ gió cao nhất theo trong một dặm đường | 
+| 42 | **X**_ATTRIBUTES  | Có dạng a,S. Với a là **số ngày bỏ lỡ**, S là nguồn của data |
