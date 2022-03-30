@@ -1,3 +1,4 @@
 data/gsom
 *.tar
 *.gz
+*.pyc
