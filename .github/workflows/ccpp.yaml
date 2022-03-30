@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install requirements
-      run: sudo pip install -r requirement.txt
+      run: sudo pip install -r REQUIREMENTS.txt
     - name: Testing
       run: pytest
