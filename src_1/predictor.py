@@ -3,7 +3,7 @@ import numpy as np
 
 class LinearModel():
     '''
-        TODO: @Hung
+        TODO: @Do
         Ax = b => x = b*A^-1
         b: (TMIN, TMAX, TACG)
     '''
