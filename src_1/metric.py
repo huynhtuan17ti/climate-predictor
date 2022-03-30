@@ -1,4 +1,4 @@
-# TODO: @Tuan
+import numpy as np
 
-def MSE():
-    pass
+def MSE(pred, target):
+    return np.mean(np.abs(pred - target))
