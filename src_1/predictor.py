@@ -23,8 +23,7 @@ class LinearModel():
             df.pop(s)
         df['padding'] = [1 for i in range(0, df.shape[0])]
         array = df.to_numpy()
-        array_transpose = array.T
-        res = (np.linalg.inv(array_transpose.dot(array)).astype(np.float64)).dot(array_transpose)
+        res = (np.linalg.inv(array.T.dot(array)).astype(np.float64)).dot(array.T)
         self.weight = np.array([res.dot(y_tmin), res.dot(y_tmax), res.dot(y_tavg)])
         return self.weight
 
@@ -40,8 +39,9 @@ class LinearModel():
     def load(self, pickle_file_name):
         with open(pickle_file_name, 'rb') as handle:
             self.weight = pickle.load(handle)
-            
-'''df = pd.DataFrame([(1, 2, 3, 4, 5, 6), 
+
+'''
+df = pd.DataFrame([(1, 2, 3, 4, 5, 6), 
                     (2.8, 4.2, 6, 8, 10, 12), 
                     (3.12, 6, 9.1, 12, 15, 18),
                     (4.5, 8.5, 12, 16, 20, 24.12),
@@ -56,4 +56,5 @@ model = LinearModel()
 weight = model.calc_weight(df)
 for line in weight:
     print(line)
-print(model.predict(np.array([[24, 30.15, 36]], dtype = np.int64)))'''
+print(model.predict(np.array([[24, 30.15, 36]], dtype = np.int64)))
+'''
