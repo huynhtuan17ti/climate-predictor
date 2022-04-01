@@ -1,0 +1,4 @@
+features: ['CLDD', 'DT32', 'DX70', 'DX90', 'EMNT', 'EMXT', 'HTDD']
+predict_features: ['TMIN', 'TMAX', 'TAVG']
+train: 'data/train.csv'
+test: 'data/test.csv'
