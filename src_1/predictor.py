@@ -4,32 +4,22 @@ import pickle
 
 class LinearModel():
     '''
+        TODO: @Do
         Ax = b => x = b*A^-1
-        b: only one feature
+        b: (TMIN, TMAX, TACG)
     '''
 
     def __init__(self):
-        # TODO: each model [TMIN, TMAX, TAVG] should have a specific weight
         self.weight = np.array
-        # 0: for TMIN
-        # 1: for TMAX
-        # 2: for TAVG
         pass
 
     # dataframe just include features that in linear with TMIN, TMAX, TAVG
-    def calc_weight(self, df: pd.DataFrame):
-        # TODO: @Do, the format
-        '''
-            input: np.ndarray (x)
-            output: np.ndarray (b)
-        '''
-        (y_tmin, y_tmax, y_tavg) = (df['TMIN'].to_numpy(), df['TMAX'].to_numpy(), df['TAVG'].to_numpy())
-        for s in ['TMIN', 'TMAX', 'TAVG']:
-            df.pop(s)
-        df['padding'] = [1 for i in range(0, df.shape[0])]
-        array = df.to_numpy()
-        res = (np.linalg.inv(array.T.dot(array)).astype(np.float64)).dot(array.T)
-        self.weight = np.array([res.dot(y_tmin), res.dot(y_tmax), res.dot(y_tavg)])
+    def calc_weight(self, input: pd.DataFrame, output: pd.DataFrame):
+        y = output.to_numpy()
+        input['padding'] = [1 for i in range(0, input.shape[0])]
+        array = input.to_numpy()
+        # A.input = output -> A = inv(input_transpose x input) x input_transpose x output 
+        self.weight = (np.linalg.inv(array.T.dot(array)).astype(np.float64)).dot(array.T).dot(y)
         return self.weight
 
     def predict(self, features):
@@ -38,8 +28,7 @@ class LinearModel():
 
     def save(self, pickle_file_name):
         with open(pickle_file_name, 'wb') as handle:
-            pickle.dump(self.weight, handle, protocol=pickle.HIGHEST_PROTOCOL)
-        pass
+            pickle.dump(self.weight, handle, protocol = pickle.HIGHEST_PROTOCOL)
 
     def load(self, pickle_file_name):
         with open(pickle_file_name, 'rb') as handle:
