@@ -1,5 +1,5 @@
 numpy
 pandas
 pytest
-seaborn
 pytest-cov
+seaborn
