@@ -14,16 +14,15 @@ class LinearModel():
         pass
 
     # dataframe just include features that in linear with TMIN, TMAX, TAVG
-    def calc_weight(self, input: pd.DataFrame, output: pd.DataFrame):
-        y = output.to_numpy()
-        input['padding'] = [1 for i in range(0, input.shape[0])]
-        array = input.to_numpy()
+    def calc_weight(self, input: np.array, output: np.array):
+        padding = np.array([[1] for i in range(0, input.shape[0])])
+        array = np.append(input, padding, axis=1)
         # A.input = output -> A = inv(input_transpose x input) x input_transpose x output 
-        self.weight = (np.linalg.inv(array.T.dot(array)).astype(np.float64)).dot(array.T).dot(y)
+        self.weight = (np.linalg.inv(array.T.dot(array)).astype(np.float64)).dot(array.T).dot(output).T
         return self.weight
 
-    def predict(self, features):
-        x = np.append(features[0], 1)
+    def predict(self, features: np.array):
+        x = np.array([np.append(features[0], 1)])
         return self.weight.dot(x.T)
 
     def save(self, pickle_file_name):
