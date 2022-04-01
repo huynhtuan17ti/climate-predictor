@@ -2,3 +2,4 @@ data/gsom
 *.tar
 *.gz
 *.pyc
+personal.*
