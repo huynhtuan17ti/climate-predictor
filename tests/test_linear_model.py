@@ -15,8 +15,12 @@ def test_linear_regression():
                     (6.7, 11.9, 18, 24, 30.15, 36)
                 ], 
                 columns = ('TMIN', 'TMAX', 'TAVG', 'x', 'y', 'z'))
+
     model = LinearModel()
-    weight = model.calc_weight(df)
-    for coeff in weight:
-        print(coeff)
+    dfi = df.copy()
+    for i in ['TMIN', 'TMAX', 'TAVG']:
+        dfi.pop(i)
+
+    weight = model.calc_weight(dfi, df['TMIN'])
+    print(weight)
     print(model.predict(np.array([[24, 30.15, 36]], dtype = np.int64)))
