@@ -22,7 +22,7 @@ class LinearModel():
         return self.weight
 
     def predict(self, features: np.array):
-        x = np.array([np.append(features[0], 1)])
+        x = np.array([np.append(features[i], 1) for i in range(0, features.shape[0])])
         return self.weight.dot(x.T)
 
     def save(self, pickle_file_name):
