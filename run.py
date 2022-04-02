@@ -19,6 +19,7 @@ def main():
     for idx, predict_feature in enumerate(cfg['predict_features']):
         print(f'[=] {predict_feature}', end = ': ')
         model_dict[predict_feature] = train(input_data, output_data[:, idx])
+        model_dict[predict_feature].save(cfg['weight_path'] + f'{predict_feature}.pkl')
     print()
 
     # ==== TEST ====

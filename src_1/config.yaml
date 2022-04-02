@@ -1,4 +1,5 @@
-features: ['CLDD', 'DT32', 'DX70', 'DX90', 'EMNT', 'EMXT', 'HTDD']
+features: ['CLDD', 'DT32', 'DX70', 'EMNT', 'EMXT', 'HTDD']
 predict_features: ['TMIN', 'TMAX', 'TAVG']
 train: 'data/train.csv'
 test: 'data/test.csv'
+weight_path: 'src_1/weights/'
