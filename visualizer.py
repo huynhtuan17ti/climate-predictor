@@ -15,3 +15,8 @@ def plot_graph(df):
         sns.regplot(ax=axes[1], x=valid_col, y="TMAX", **kwargs)
         sns.regplot(ax=axes[2], x=valid_col, y="TAVG", **kwargs)
         fig.suptitle(valid_col, fontsize=20)
+
+def plot_year(df, year):
+    mask = (df['DATE'] >= f'{year}-01-01') & (df['DATE'] < f'{year+1}-01-01')
+    _df = df.loc[mask]
+    sns.lineplot(data=_df, x="DATE", y="TAVG")
