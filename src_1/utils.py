@@ -10,7 +10,7 @@ def correlation_of_two_variables(x : np.array, y : np.array):
         return None
     
     n = x.shape[0]
-    x_sum, y_sum, xy_sum, x_square_sum, s_square_sum = 0, 0, 0, 0, 0
+    x_sum, y_sum, xy_sum, x_square_sum, y_square_sum = 0, 0, 0, 0, 0
     
     for i in range (0, n):
         x_sum += x[i]
