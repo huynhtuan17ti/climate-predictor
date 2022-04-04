@@ -1,6 +1,7 @@
 from src_1.predictor import LinearModel
 import pandas as pd
 import numpy as np
+from src_1.utils import correlation_of_two_variables
 
 def test_linear_regression():
     # TODO: @Do, also update a unit-test for linear model
@@ -19,3 +20,18 @@ def test_linear_regression():
     weight = model.calc_weight(dfi, dfo)
     print('weight: ', weight)
     print('predict for ', np.array([[6, 11, 19]]), '\nresult: ' ,model.predict(np.array([[6, 11, 19]], dtype = np.int64)))
+
+def test_correlation_function():
+    a = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    b = a * 3 + 10
+    
+    b[0] += 0.001
+    b[1] -= 0.01
+    b[2] += 0.02
+    
+    print('A: ', a)
+    print('B: ', b)
+
+    print('Correlation: ', correlation_of_two_variables(a, b))
+
+    
