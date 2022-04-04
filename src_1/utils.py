@@ -3,6 +3,23 @@ import pandas as pd
 import numpy as np
 from .predictor import LinearModel
 from .metric import MSE
+from math import sqrt
+
+def correlation_of_two_variables(x : np.array, y : np.array):
+    if x.shape != y.shape:
+        return None
+    
+    n = x.shape[0]
+    x_sum, y_sum, xy_sum, x_square_sum, s_square_sum = 0, 0, 0, 0, 0
+    
+    for i in range (0, n):
+        x_sum += x[i]
+        y_sum += y[i]
+        xy_sum += x[i] * y[i]
+        x_square_sum += x[i] * x[i]
+        y_square_sum += y[i] * y[i]
+
+    return (n * xy_sum - x_sum * y_sum) / (sqrt(n * x_square_sum - x_sum * x_sum) * sqrt(n * y_square_sum - y_sum * y_sum))
 
 def extract_features(df: pd.DataFrame, features: List[str]) -> np.array:
     '''
