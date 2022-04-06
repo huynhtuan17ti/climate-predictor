@@ -19,23 +19,23 @@ Sử dụng hồi quy tuyến tính để dự đoán nhiệt độ.
 ```python
 ## TRAIN SET
 [=] TMIN:
-	[*] MSE error: 0.6780580866958524
+	[*] MAE error: 0.6780580866958524
 	[*] RMSE error: 0.9529377996951054
 [=] TMAX:
-	[*] MSE error: 0.955749488446695
+	[*] MAE error: 0.955749488446695
 	[*] RMSE error: 1.3370741115152036
 [=] TAVG:
-	[*] MSE error: 0.23724220251560518
+	[*] MAE error: 0.23724220251560518
 	[*] RMSE error: 0.42522936281120516
 
 ## TEST SET
 [=] TMIN:
-	[*] MSE error: 1.0315703635227735
+	[*] MAE error: 1.0315703635227735
 	[*] RMSE error: 1.4473537530424798
 [=] TMAX:
-	[*] MSE error: 1.44284969016253
+	[*] MAE error: 1.44284969016253
 	[*] RMSE error: 1.8482529830560581
 [=] TAVG:
-	[*] MSE error: 0.48001949615866096
+	[*] MAE error: 0.48001949615866096
 	[*] RMSE error: 0.801823461651462
 ```

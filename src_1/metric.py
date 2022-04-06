@@ -1,6 +1,6 @@
 import numpy as np
 
-def MSE(pred, target):
+def MAE(pred, target):
     return np.mean(np.abs(pred - target))
 
 def RMSE(pred, target):

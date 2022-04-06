@@ -41,5 +41,5 @@ def train(input: np.array, target: np.array) -> LinearModel:
 
 def evaluate(model: LinearModel, input: np.array, target: np.array) -> None:
     pred = model.predict(input)
-    print('\t[*] MSE error:', MSE(pred, target.T))
+    print('\t[*] MAE error:', MAE(pred, target.T))
     print('\t[*] RMSE error:', RMSE(pred, target.T))
