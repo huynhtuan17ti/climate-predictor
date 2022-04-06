@@ -2,10 +2,10 @@ from typing import List
 import pandas as pd
 import numpy as np
 from .predictor import LinearModel
-from .metric import MSE
+from .metric import *
 from math import sqrt
 
-def correlation_of_two_variables(x : np.array, y : np.array):
+def correlation_of_two_variables(x: np.array, y: np.array) -> float:
     if x.shape != y.shape:
         return None
     
@@ -20,6 +20,9 @@ def correlation_of_two_variables(x : np.array, y : np.array):
         y_square_sum += y[i] * y[i]
 
     return (n * xy_sum - x_sum * y_sum) / (sqrt(n * x_square_sum - x_sum * x_sum) * sqrt(n * y_square_sum - y_sum * y_sum))
+
+def check_if_column_nan(array: np.array) -> bool:
+    return np.count_nonzero(np.isnan(array)) == array.shape[0]
 
 def extract_features(df: pd.DataFrame, features: List[str]) -> np.array:
     '''
@@ -38,4 +41,5 @@ def train(input: np.array, target: np.array) -> LinearModel:
 
 def evaluate(model: LinearModel, input: np.array, target: np.array) -> None:
     pred = model.predict(input)
-    print('[*] MSE error:', MSE(pred, target.T))
+    print('\t[*] MSE error:', MSE(pred, target.T))
+    print('\t[*] RMSE error:', RMSE(pred, target.T))
