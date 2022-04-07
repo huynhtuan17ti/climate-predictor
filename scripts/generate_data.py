@@ -31,7 +31,7 @@ df.to_csv('data/raw.csv', index=False)
 missing_column = ['DYFG', 'DYFG', 'EVAP', 'WDMV', 'MNPN', 'MXPN', 'HN01', 'HX01', 'LN01', 'LX01', 'MN01', 'MX01', 'HN02', 'HX02', 'LN02', 'LX02', 'MN02', 'MX02']
 df.drop(missing_column, axis=1, inplace=True)
 
-# Fill with mean value
+# Fill nan value
 for col in df.columns:
     if 'ATTRIBUTES' in col:
         df.drop([col], axis=1, inplace=True)

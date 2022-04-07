@@ -2,15 +2,14 @@
 Xây dựng mô hình dự đoán nhiệt độ dựa theo bộ dữ liệu theo tháng của trạm USC. 
 
 ## Biểu đồ
-[Correlation Score](correlation.csv)  
-Lấy ngưỡng là 0.7 ta được các biểu đồ sau.  
+Dựa vào [Correlation Score](correlation.csv), lấy ngưỡng là 0.7 ta được các biểu đồ sau.  
 Biểu đồ thể hiện mối quan hệ tuyến tính giữa các thuộc tính với nhiệt độ.
-![CLDD](img/CLDD.png)
-![DT32](img/ELEVATION.png)
-![DX70](img/DX70.png)
-![EMNT](img/EMNT.png)
-![EMXT](img/EMXT.png)
-![HTDD](img/HTDD.png)
+![CLDD](images/CLDD.png)
+![DT32](images/ELEVATION.png)
+![DX70](images/DX70.png)
+![EMNT](images/EMNT.png)
+![EMXT](images/EMXT.png)
+![HTDD](images/HTDD.png)
 
 ## Thuật toán
 Sử dụng hồi quy tuyến tính để dự đoán nhiệt độ.
