@@ -33,3 +33,28 @@ def df_prediction(df: pd.DataFrame, feature_list: List[str], model_path: str):
     predict = model.predict(data)
     df['pred'] = predict
     return df
+
+def plot_missingdata(df:pd.DataFrame, title:str, xlabel:str, ylabel:str):
+    ''' This function takes a data frame as input plots the list of columns with corresponding total number of missing values'''
+    # Let us see what columns have missing values
+    # Total number of entries (rows X columns) in the dataset
+    total= df.size
+    #Number of missing values per column
+    missingCount = df.isnull().sum()
+    #Total number of missing values
+    missing_tot = missingCount.sum()
+    # Calculate percentage of missing values
+    print("The dataset contains", round(((missing_tot/total) * 100), 2), "%", "missing values")
+
+    # keeping only the columns with missing values>0 
+    missing = missingCount[missingCount > 0] 
+    print(missing)
+    # sorting in order of missing values and making the change to original missing series
+    missing.sort_values(inplace=True) 
+    missing.plot.bar()
+    plt.title(title, size=15,loc='left')
+    plt.xticks(fontsize=11,rotation=45)
+    plt.yticks(fontsize=11)
+    plt.xlabel(xlabel, fontsize=13)
+    plt.ylabel(ylabel, fontsize=13)
+    plt.show()

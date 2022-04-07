@@ -6,7 +6,7 @@ Xây dựng mô hình dự đoán nhiệt độ dựa theo bộ dữ liệu theo
 Lấy ngưỡng là 0.7 ta được các biểu đồ sau.  
 Biểu đồ thể hiện mối quan hệ tuyến tính giữa các thuộc tính với nhiệt độ.
 ![CLDD](img/CLDD.png)
-![DT32](img/DT32.png)
+![DT32](img/ELEVATION.png)
 ![DX70](img/DX70.png)
 ![EMNT](img/EMNT.png)
 ![EMXT](img/EMXT.png)
@@ -19,23 +19,23 @@ Sử dụng hồi quy tuyến tính để dự đoán nhiệt độ.
 ```python
 ## TRAIN SET
 [=] TMIN:
-	[*] MAE error: 0.6780580866958524
-	[*] RMSE error: 0.9529377996951054
+	[*] MAE error: 0.47247438497885114
+	[*] RMSE error: 0.6254488696926046
 [=] TMAX:
-	[*] MAE error: 0.955749488446695
-	[*] RMSE error: 1.3370741115152036
+	[*] MAE error: 0.476735816779323
+	[*] RMSE error: 0.6245444434938698
 [=] TAVG:
-	[*] MAE error: 0.23724220251560518
-	[*] RMSE error: 0.42522936281120516
+	[*] MAE error: 0.11786874192741226
+	[*] RMSE error: 0.19879482659122233
 
 ## TEST SET
 [=] TMIN:
-	[*] MAE error: 1.0315703635227735
-	[*] RMSE error: 1.4473537530424798
+	[*] MAE error: 0.49953092669201815
+	[*] RMSE error: 0.650159355646133
 [=] TMAX:
-	[*] MAE error: 1.44284969016253
-	[*] RMSE error: 1.8482529830560581
+	[*] MAE error: 0.48573974855244995
+	[*] RMSE error: 0.6165218927429887
 [=] TAVG:
-	[*] MAE error: 0.48001949615866096
-	[*] RMSE error: 0.801823461651462
+	[*] MAE error: 0.13005632219437713
+	[*] RMSE error: 0.20206556256600883
 ```
