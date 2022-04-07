@@ -19,7 +19,7 @@ def correlation_of_two_variables(x: np.array, y: np.array) -> float:
         x_square_sum += x[i] * x[i]
         y_square_sum += y[i] * y[i]
 
-    return (n * xy_sum - x_sum * y_sum) / (sqrt(n * x_square_sum - x_sum * x_sum) * sqrt(n * y_square_sum - y_sum * y_sum))
+    return (n * xy_sum - x_sum * y_sum) / (sqrt(n * x_square_sum - x_sum * x_sum) * sqrt(n * y_square_sum - y_sum * y_sum) + 1e-6)
 
 def check_if_column_nan(array: np.array) -> bool:
     return np.count_nonzero(np.isnan(array)) == array.shape[0]
