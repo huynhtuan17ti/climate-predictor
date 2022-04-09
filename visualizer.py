@@ -6,6 +6,7 @@ from typing import List
 import pandas as pd
 from src_1.predictor import LinearModel
 from src_1.utils import *
+import matplotlib.ticker as ticker
 
 def plot_graph(df: pd.DataFrame):
     valid_columns = []
@@ -21,10 +22,14 @@ def plot_graph(df: pd.DataFrame):
         sns.regplot(ax=axes[2], x=valid_col, y="TAVG", **kwargs)
         fig.suptitle(valid_col, fontsize=20)
 
-def plot_year(df: pd.DataFrame, year: int):
-    mask = (df['DATE'] >= f'{year}-01-01') & (df['DATE'] < f'{year+1}-01-01')
+def plot_year(df: pd.DataFrame, start_year: int, end_year: int):
+    mask = (df['DATE'] >= f'{start_year}-01-01') & (df['DATE'] < f'{end_year+1}-01-01')
     _df = df.loc[mask]
-    sns.lineplot(data=_df, x="DATE", y="TAVG")
+    fig, ax = plt.subplots(figsize=(30, 10))
+    sns.lineplot(ax=ax, data = _df,  y="TAVG", x="DATE")
+    start, end = ax.get_xlim()
+    ax.xaxis.set_major_locator(ticker.MultipleLocator(12))
+    plt.setp(ax.xaxis.get_majorticklabels(), rotation = 45)
 
 def df_prediction(df: pd.DataFrame, feature_list: List[str], model_path: str):
     model = LinearModel()
