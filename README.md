@@ -1,6 +1,6 @@
 # Bài toán khí hậu
-Đây là đồ án cuối kì lớp Toán Ứng dụng và Thống kê 20TN
-Các sinh viên
+Đây là đồ án cuối kì lớp Toán Ứng dụng và Thống kê 20TN.  
+Nhóm gồm các sinh viên:
 | Họ và tên     | MSSV      |
 | --------      | -----     |
 | Huỳnh Minh Tuấn | 20120024 |
@@ -8,7 +8,7 @@ Các sinh viên
 | Trần Ngọc Đô    | 20120057 |
 
 ## Bộ dữ liệu
-Sử dụng nguồn dữ liệu từ [Cơ quan Quản lý Khí quyển và Đại dương Quốc gia (NOAA) của Mỹ](https://www.ncdc.noaa.gov/cdo-web/datasets)
+Sử dụng nguồn dữ liệu từ [Cơ quan Quản lý Khí quyển và Đại dương Quốc gia (NOAA) của Mỹ](https://www.ncdc.noaa.gov/cdo-web/datasets).  
 Nhóm sinh viên chọn bộ dữ liệu [khí hậu theo tháng](data/) để phân tích và thực hiện các bài toán.
 
 ## Bài toán 1
