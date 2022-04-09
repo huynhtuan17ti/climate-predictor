@@ -1,5 +1,5 @@
 # Bài toán khí hậu
-Đây là đồ án cuối kì lớp Toán Ứng dụng và Thống kê 20TN.  
+Đây là đồ án cuối kì lớp Toán Ứng dụng và Thống kê 20TN trường Đại học Khoa học Tự Nhiên.  
 Nhóm gồm các sinh viên:
 | Họ và tên     | MSSV      |
 | --------      | -----     |
