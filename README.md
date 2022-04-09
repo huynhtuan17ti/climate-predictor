@@ -7,6 +7,13 @@ Nhóm gồm các sinh viên:
 | Nguyễn Văn Hưng | 20120009 |
 | Trần Ngọc Đô    | 20120057 |
 
+## Cài đặt
+```shell
+$user git clone https://github.com/huynhtuan17ti/climate-predictor
+$user cd climate-predictor
+$user pip install -r REQUIREMENTS.txt
+```
+
 ## Bộ dữ liệu
 Sử dụng nguồn dữ liệu từ [Cơ quan Quản lý Khí quyển và Đại dương Quốc gia (NOAA) của Mỹ](https://www.ncdc.noaa.gov/cdo-web/datasets).  
 Nhóm sinh viên chọn bộ dữ liệu [khí hậu theo tháng](data/) để phân tích và thực hiện các bài toán.
@@ -30,7 +37,7 @@ Mã nguồn của bài toán 1 nằm ở thư mục `src_1/`
 ```
 
 ### Sử dụng
-```bash
+```shell
 # Thay đổi config file (mặc định là src_1/config.yaml). Ví dụ chạy trên personal.yaml
 $user run.py --config personal.yaml 
 # Để chọn các biến phù hợp cho mô hình tuyến tính và tính toán độ tương quan giữa các biến
