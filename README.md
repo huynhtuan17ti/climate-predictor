@@ -34,6 +34,7 @@ Mã nguồn của bài toán 1 nằm ở thư mục `src_1/`
 |    |___ metric.py       (chứa các hàm mất mát dùng để đánh giá độ hiệu quả của mô hình)
 |    |___ predictor.py    (source code của mô hình tuyến tính)
 |    |___ utils.py        (chứa các phép tính toán và các hàm hỗ trợ)
+|    |___ visualizer.py   (các hàm để trực quan hóa đồ thị)
 ```
 
 ### Sử dụng
@@ -47,4 +48,13 @@ $user run.py --mode 0
 ```
 
 ## Bài toán 2
-Mô tả dữ liệu về TAVG (nhiệt độ trung bình) trong vòng 10 năm từ 2010 đến 2020 của các trạm USC.
+Mô tả dữ liệu về TAVG (nhiệt độ trung bình) trong vòng 10 năm từ 2005 đến 2014 của các trạm USC.
+
+### Cấu trúc mã nguồn
+Mã nguồn của bài toán 2 nằm ở thư mục `src_2/`
+
+```
+|___ src_2/
+|    |___ images/         (lưu lại các biểu đồ dùng để biểu diễn)
+|    |___ visualizer.py   (các hàm để trực quan hóa đồ thị)
+```
