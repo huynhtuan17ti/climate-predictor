@@ -1,5 +1,5 @@
 features: ['ELEVATION', 'CLDD', 'DX70', 'EMNT', 'EMXT', 'HTDD']
-correlation_threshold: 0.6
+correlation_threshold: 0.7
 predict_features: ['TMIN', 'TMAX', 'TAVG']
 train: 'data/train.csv'
 test: 'data/test.csv'
